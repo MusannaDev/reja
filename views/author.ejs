@@ -1,1 +1,291 @@
-<div>Hello World you are in authors</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My EJS App</title>
+  <!-- Bootstrap 4.1.1 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- Font Awesome 4.7.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <div class="frame">
+    <div class="main_frame">
+      <!-- LEFT FRAME -->
+      <div class="left_frame">
+
+        <!-- LEFT 1 FRAME -->
+        <div class="left_1">
+          <div class="left_1-1">
+            <img src="/author/images/profile.png"
+           width="156px"
+           height="142px">
+          
+          </div>
+
+          <div class="left_1-2">
+            <%=user.name%>
+          </div>
+          <div class="left_1-3">
+            <%=user.profession%>
+          </div>
+          <div class="left-icons">
+            
+            <a href="" class="link_href">
+              <div class="icon">
+                <img src="/author/icon/Icons-facebook.svg" alt="" class="icon-1">
+              </div>
+            </a>
+            
+            <a href="" class="link_href">
+              <div class="icon">
+                <img src="/author/icon/Icons-instagram.svg" alt="" class="icon-1">
+              </div>
+            </a>
+            <a href="" class="link_href">
+              <div class="icon">
+                <img src="/author/icon/Icons-linkedin.svg" alt="" class="icon-1">
+              </div>
+            </a>
+            <a href="" class="link_href">
+              <div class="icon">
+                <img src="/author/icon/Icons-twitter.svg" alt="" class="icon-1">
+              </div>
+            </a>
+            <a href="" class="link_href">
+              <div class="icon">
+                <img src="/author/icon/Icons-Youtube.svg" alt="" class="icon-1">
+              </div>
+            </a>
+            <a href="" class="link_href">
+              <div class="icon">
+                <img src="/author/icon/Icons-dribbble.svg" alt="" class="icon-1">
+              </div>
+            </a>
+            
+          </div>
+        </div>
+        <div class="marginer"></div>
+
+        <!-- LEFT 2 FRAME -->
+        <div class="left_2">
+          <div class="left_2-1">
+            <p>Age:</p> 
+            <div><%=user.age%></div>
+          </div>
+
+          <div class="left_2-1">
+              <p>Residance:</p>
+              <div><%=user.residence%></div>
+          </div>
+
+          <div class="left_2-1">
+            <p>Work Place:</p>
+            <div><%=user.work_place%></div>
+          </div>
+
+          <div class="left_2-1">
+            <p>City:</p>
+            <div><%=user.city%></div>
+          </div> 
+
+        </div> 
+        <div class="marginer"></div> 
+
+        <!-- LEFT 3 FRAME -->
+        <div class="left_3">
+          <h4>Languages</h4>
+          <div class="languages">
+            <span>Uzbek</span> <span>100%</span>
+          </div>
+          <div class="languages">
+            <span>English</span> <span>80%</span>
+          </div>
+          <div class="languages">
+            <span>Korean</span> <span>60%</span>
+          </div>
+        </div>
+        <div class="marginer"></div>
+        
+        <!-- LEFT 4 FRAME -->
+        <div class="left_4">
+          <h4>Skills</h4>
+          <div class="skills">
+            <span>Html</span> <span>90%</span>
+          </div>
+          <div class="skills">
+            <span>Css</span> <span>85%</span>
+          </div>
+          <div class="skills">
+            <span>Js</span> <span>80%</span>
+          </div>
+          <div class="skills">
+            <span>PHP</span> <span>75%</span>
+          </div>
+          <div class="skills">
+            <span>WorldPress</span> <span>85%</span>
+          </div>
+        </div>
+        <div class="marginer"></div>
+
+        <!-- LEFT 5 FRAME -->
+        <div class="left_5">
+          <h4>Extra Skills</h4>
+          <div class="extra-classes">
+            <img src="/author/icon/Icons.svg" alt="icon">
+            <span>Bootstrap, Materialize</span>
+          </div>
+          <div class="extra-classes">
+            <img src="/author/icon/Icons.svg" alt="icon">
+            <span>Stylus, Sass, Less</span>
+          </div>
+          <div class="extra-classes">
+            <img src="/author/icon/Icons.svg" alt="icon">
+            <span>Gulp, Webpack, Grunt</span>
+          </div>
+          <div class="extra-classes">
+            <img src="/author/icon/Icons.svg" alt="icon">
+            <span>GIT Knowledge</span>
+          </div>
+        </div>
+        <div class="marginer"></div>
+
+        </div>
+     
+      <!-- Middle frame -->
+      <div class="midd_frame">
+
+        <div class="midd_intro">
+          <div class="shapes">
+            <img src="/author/menu_icon/Rectangle 52.svg" alt="" class="shape-1">
+            <img src="/author/menu_icon/Ellipse_12.svg" alt="" class="shape-2">
+            <img src="/author/menu_icon/Rectangle 51.svg" alt="" class="shape-3">
+            <img src="/author/menu_icon/Ellipse 16.svg" alt="" class="shape-4">
+            <img src="/author/menu_icon/Ellipse 13.svg" alt="" class="shape-5">
+            <img src="/author/menu_icon/Ellipse 15.svg" alt="" class="shape-6">
+            <img src="/author/menu_icon/Polygon 1.svg" alt="" class="shape-7">
+          </div>
+          <div class="midd_intro-details">
+            <h2>Senior Software Engineer in NVDIA</h2>
+          <div><%=user.service_desc%></div>
+          <button class="hire-me">HIRE ME
+            <img src="/author/icon/Frame.svg" alt="">
+          </button>
+          </div>
+          <div class="picture">
+            <img src="/author/images/about.png" alt="">
+          </div>
+        </div>
+        <div class="midd_services">
+
+          <div class="my_services">
+            <h3>My Services</h3>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+          </div>
+
+          <div class="middle_final">
+            <div class="midd_courses">
+              <img src="/author/box_images/Icons_coding.png" alt="" class="photo-icon">
+              <h5>Web Development</h5>
+              <p>Blog, E-commerce</p>
+            </div>
+            <div class="midd_courses">
+              <img src="/author/box_images/icons_illustration.png" alt="" class="photo-icon">
+               <h5>UI/UX Design</h5>
+              <p>Mobile app, Website design</p>
+            </div>
+            <div class="midd_courses">
+              <img src="/author/box_images/Icons_Microphone.png" alt="" class="photo-icon">
+              <h5>Sound Design</h5>
+              <p>Voice Over, Beat Making</p>
+            </div>
+            <div class="midd_courses">
+              <img src="/author/box_images/Icons_game-development.png" alt="" class="photo-icon">
+              <h5>Game Design</h5>
+              <p>Character Design, Props & Objects</p>
+            </div>
+            <div class="midd_courses">
+              <img src="/author/box_images/Icons_Photographer.png" alt="" class="photo-icon">
+              
+               <h5>Photography</h5>
+               <p>Portrait, Product Photography</p>
+              
+            </div>
+            <div class="midd_courses">
+              <div><h5>Advertising</h5></div>
+              <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p></div>
+              <div><a href="#">ORDER NOW ></a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT FRAME -->
+
+      <div class="right_frame">
+        <div class="right-icons">
+          <a href="" class="link_icons">
+          <div class="icon_right">
+            <img class="contrast" src="/author/btn_icon/Icons_Contrast.svg" alt="" class="icon-2">
+          </div>
+        </a>
+        <a href="" class="link_icons">
+          <div class="icon_right pop_ups">
+            <img src="/author/btn_icon/Pop up.svg" alt="" class="icon-2 pop-up">
+          </div>
+        </a>
+
+        <a href="" class="link_icons home_icon">
+          <div class="icon_right">
+            <img class="home" src="/author/btn_icon/Icons_Home.svg" alt="" class="icon-2">
+          </div>
+        </a>
+
+        <a href="" class="link_icons">
+          <div class="icon_right">
+            <img src="/author/btn_icon/file-code.svg" alt="" class="icon-2">
+          </div>
+        </a>
+
+        <a href="" class="link_icons">
+          <div class="icon_right">
+            <img src="/author/btn_icon/Icons_cv.svg" alt="" class="icon-2">
+          </div>
+        </a>
+        
+        <a href="" class="link_icons">
+          <div class="icon_right">
+            <img src="/author/images/frames_1.png" alt="" class="icon-2 frame_1">
+          </div>
+        </a>
+
+       
+
+        <a href="" class="link_icons">
+          <div class="icon_right">
+            <img src="/author/images/Icons_blog.png" alt="" class="icon-2">
+          </div>
+        </a>
+
+        <a href="" class="link_icons">
+          <div class="icon_right">
+            <img src="/author/btn_icon/Icons_Contact.svg" alt="" class="icon-2">
+          </div>
+        </a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  <!-- JavaScript Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
