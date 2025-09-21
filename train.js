@@ -76,3 +76,30 @@ async function run() {
   console.log(javob);
 }
 run();
+
+
+// MIT TASK A
+
+/* Harf sifatida kiritilgan birinchi parametr, kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchiFunktsiya tuzing
+Masalan: countLetter("e", "engineer")'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun 3 sonini qaytaradi */
+
+function countLetter(letter, word) {
+    // Harf va so'z katta-kichik harflarga sezgir bo'lmasligi uchun kichik harflarga aylantiramiz
+    const lowerLetter = letter.toLowerCase();
+    const lowerWord = word.toLowerCase();
+    
+    // Hisoblagichni boshlaymiz
+    let count = 0;
+    
+    // So'zning har bir harfini tekshiramiz
+    for (let i = 0; i < lowerWord.length; i++) {
+        if (lowerWord[i] === lowerLetter) {
+            count++; // Mos kelsa, hisoblagichni 1 ga oshiramiz
+        }
+    }
+    
+    // Natijani qaytaramiz
+    return count;
+}
+console.log(countLetter("e", "engineer"));
+console.log(countLetter("n", "intercontinental"));
