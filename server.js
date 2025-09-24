@@ -6,7 +6,7 @@ let db;
 //const connectionString = "mongodb+srv://  adam:Muhammadfatih2002@cluster0.t79yirg.mongodb.net/"
 
 const connectionString = 
- "mongodb+srv://juraevotabek:Musanna_2002@cluster0.mi5i0lg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+ "mongodb+srv://juraevotabek:Musanna_2002@cluster0.mi5i0lg.mongodb.net/Reja?retryWrites=true&w=majority&appName=Cluster0"
 
 mongodb.connect(
   connectionString, 
@@ -31,4 +31,5 @@ mongodb.connect(
   }
 );
 
- 
+  
+

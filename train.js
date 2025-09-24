@@ -103,3 +103,28 @@ function countLetter(letter, word) {
 }
 console.log(countLetter("e", "engineer"));
 console.log(countLetter("n", "intercontinental"));
+
+
+// MIT Task B
+//TASK B: 
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+function numberCounter(text){
+    if(typeof text === 'string'){
+        text =  text.split('')
+        let counter = 0
+       
+        for(const item of text){
+            if(!isNaN(item) && item !== ' '){
+                counter++
+            }
+        }
+        return counter
+    }
+
+}
+
+console.log('ishtirok etgan raqamlar soni :',numberCounter('welcome123'));
+
