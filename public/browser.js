@@ -1,4 +1,5 @@
-/* const { response } = require("express"); */
+//const { response } = require("../app");
+
 console.log("Frontend JSda ishga tushdi");
 
 function itemTemplate(item) {
@@ -22,12 +23,19 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+/* Formni qo'lga olib olamiz getElementById orqali  "submit" bosganda pastdaagi function ishga tushadi */
 
-  axios
-    .post("/create-item", {reja: createField.value})
+document.getElementById("create-form").addEventListener("submit", function (e) {
+  // Stops traditional API
+  e.preventDefault();
+  // traditional API ni to'xtatishdan maqsad Rest API ni qurish
+
+  // Generate Rest API
+  console.log("FRONTENDAN BACKENDGA REST API JONATAMIZ") 
+  axios // backendda ham ishlaydi, ishlab turgan 2 t backend serverdan bir biridan ma'lumot ololadi
+    .post("/create-item", {reja: createField.value}) // create-item header, rejadn boshlangan body
     .then((response) => {
+      console.log("Step6 => Frontendga qaytib kirish");
       document
         .getElementById("item-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
@@ -38,6 +46,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     console.log("Iltimos qaytadan harakat qiling");
   });
 });
+
 
 document.addEventListener("click", function (e) {
   // delete operations
@@ -59,6 +68,33 @@ document.addEventListener("click", function (e) {
 
   // edit operations
   if (e.target.classList.contains("edit-me")) {
-    alert("Siz edit tugmasini bosdingiz");
+    let userInput = prompt(
+      "O'zgartirishingizni kiriting", 
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"), 
+          new_input: userInput,
+        })
+        .then(response => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text").innerHTML = userInput;
+        })
+        .catch(err => {
+          console.log("Iltimos qaytadan harakat qiling");
+        });
+    }
   }
+});
+
+
+document.getElementById("clean-all").addEventListener("click", function() {
+  axios.post("/delete-all", { delete_all: true }).then(response => {
+    alert(response.data.state);
+    document.location.reload();
+  })
 });

@@ -11,17 +11,18 @@
         <h1 class="display-4 text-center py-1">REJA VA MAQSADLAR</h1>
 
         <div class="jumbotron p-3 shadow-sm">
-            <form id="create-form" action="/create-item" method="POST">
+            <form id="create-form" action="/create-item" method="POST"> <!-- action - create-item API ga so'rov yuboriladi-->
                 <div class="d-flex align-items-center">
                     <input 
                     id="create-field"
-                    name="reja"
+                    name="reja"      
                     autofocus
                     autocomplete="off"
                     class="form-control mr-3"
                     type="text"
                     style="flex: 1"
-                    />
+                    />  <!-- Name: reja = body  -->
+                    <!-- create-item => header -->
                     <button class="btn btn-primary" style="border-radius: 20px; margin-left: 1rem;">
                         Yangi Reja Qo'shish
                     </button>
@@ -53,6 +54,7 @@
     </div>
     
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="/browser.js"></script>
+    <script src="/browser.js"></script> <!-- Vanilla js --> 
+    <!-- browser.jsni publicni tashqiga ochiqlaganimiz uchun olib beryapti -->
 </body>
 </html>
