@@ -190,7 +190,7 @@ console.log(shop.qoldiq());
 shop.sotish('non', 3);
 shop.qabul('cola', 4);
 console.log(shop.qoldiq()); */
-
+/* 
 const moment = require("moment");
 
 class Shop {
@@ -292,3 +292,24 @@ console.log(shop.qoldiq());
 shop.sotish('non', 3);
 shop.qabul('cola', 4);
 console.log(shop.qoldiq());
+ */
+/* TASK D : 
+
+Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;  */
+
+function checkContent(reversed, unreversed) {
+  if(reversed.length !== unreversed.length) {
+    return false;
+  };
+
+  reversed = reversed.toLowerCase;
+  unreversed = unreversed.toLowerCase;
+
+
+  return true;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou"));
+//checkContent("devex", "enginex");
