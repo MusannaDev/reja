@@ -1,27 +1,31 @@
 console.log("Web serverni boshlash");
 const express = require("express");
 
-const app = express();
+const app = express(); // expressning instans objecti
 
 
 
 
 //MongoDB chaqirish
-const db = require("./server").db();
+const db = require("./server").db(); // maqsadli qalam
 const mongodb = require("mongodb");
 
 
 // 1 Kirish code
-app.use(express.static("public")); // Middleware DP > public ochiqladi
+app.use(express.static("public")); // Middleware DP > public ommaga ochiqlanadi
 app.use(express.json());           // Middleware DP > support Rest API
 app.use(express.urlencoded({ extended: true})); // Middleware DP > support Traditional API
+// Express frameworkidan foydalangan holda veb-ilovada HTTP so‘rovlarini qayta ishlash uchun ishlatiladi
 
 // 2 Session code
+
 // 3 Views code
 app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routers code 
+
+// CREATE QISMI
 app.post("/create-item", (req, res) => {
     console.log("user entered /create-item");
     console.log("Step2 => Backendga kirish");
@@ -40,12 +44,14 @@ app.post("/create-item", (req, res) => {
 
 // DELETE QISMI
 app.post("/delete-item", (req, res) => {
+  // browser jsdagi data-id ni qiymatini qabul qilish bu frontendga post qilinadi
   const id = req.body.id;
-  
+  // databasedan o'chirish
   db.collection("plans").deleteOne(
     { _id:new mongodb.ObjectId(id) }, 
     function (err, data) {
       res.json({ state: "success" });
+      //consolega success boradi
     }
   );
 });
@@ -54,19 +60,24 @@ app.post("/delete-item", (req, res) => {
 app.post("/edit-item", (req, res) => {
   const data = req.body;
   console.log(data);
+  // databasedan ma'lumotlar o'zgartirish
   db.collection("plans").findOneAndUpdate(
     {_id: new mongodb.ObjectId(data.id)}, 
     {$set: {reja: data.new_input}}, 
     function(err, data) {
       res.json({ state: "success" });
+      // success qilib yuborib, .then(response) da datani olamiz
     }
   );
   
 });
+// findOneAndUpdate => databaseda edit qilish uchun
+
 
 // DELETE ALL QISMI
+
 app.post("/delete-all", (req, res) => {
-  if(req.body.delete_all) {
+  if(req.body.delete_all) { 
     db.collection("plans").deleteMany(function () {
       res.json({ state: "hamma rejalar o'chirildi" });
     });

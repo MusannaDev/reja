@@ -312,4 +312,26 @@ function checkContent(reversed, unreversed) {
 }
 
 console.log(checkContent("mitgroup", "gmtiprou"));
-//checkContent("devex", "enginex");
+function reverse(str) {
+  let reversed = '';
+  
+  for(let i = 0; i < str.length; i++) {
+    reversed = str[i] + reversed;
+  }
+
+  return reversed;
+}
+
+console.log(reverse("CodingMoney"));
+
+
+function reversable(str) {
+  let reversing = '';
+
+  for (let char of str) {
+    reversing = char + reversing;
+  }
+  return reversing;
+}
+
+console.log(reversable("Hi, I am Adam! How can I help you?"));
