@@ -299,7 +299,7 @@ Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala
 
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;  */
 
-function checkContent(reversed, unreversed) {
+/* function checkContent(reversed, unreversed) {
   if(reversed.length !== unreversed.length) {
     return false;
   };
@@ -335,3 +335,28 @@ function reversable(str) {
 }
 
 console.log(reversable("Hi, I am Adam! How can I help you?"));
+ */
+
+
+/* TASK-F
+
+Yagona string argumentga ega findDoublers nomli function tuzing
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+true yokida false natija qaytarsin.
+
+MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+*/
+
+function findDoublers(str) {
+  
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i], i + 1) !== -1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(findDoublers("hello"));
+console.log(findDoublers("world")); 
